@@ -30,7 +30,7 @@ class UserController extends Controller
 			array(
 				'allow',  // allow all users to perform 'index' and 'view' actions
 				'actions' => array('index', 'view'),
-				'users' => array('*'),
+				'roles' => array('user', 'admin'),
 			),
 			// array('allow', // allow authenticated user to perform 'create' and 'update' actions
 			// 	'actions'=>array('create','update'),
