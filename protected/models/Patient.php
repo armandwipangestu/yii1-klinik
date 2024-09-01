@@ -33,12 +33,12 @@ class Patient extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name, birth_date, gender, address, phone_number, region_id', 'required'),
-			array('name, phone_number', 'length', 'max'=>255),
-			array('gender', 'length', 'max'=>6),
+			array('name, phone_number', 'length', 'max' => 255),
+			array('gender', 'length', 'max' => 6),
 			array('created_at, updated_at', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, birth_date, gender, address, phone_number, region_id, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('id, name, birth_date, gender, address, phone_number, region_id, created_at, updated_at', 'safe', 'on' => 'search'),
 		);
 	}
 
@@ -50,6 +50,7 @@ class Patient extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'region' => array(self::BELONGS_TO, 'Region', 'region_id'),
 		);
 	}
 
@@ -87,20 +88,20 @@ class Patient extends CActiveRecord
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
-		$criteria=new CDbCriteria;
+		$criteria = new CDbCriteria;
 
-		$criteria->compare('id',$this->id,true);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('birth_date',$this->birth_date,true);
-		$criteria->compare('gender',$this->gender,true);
-		$criteria->compare('address',$this->address,true);
-		$criteria->compare('phone_number',$this->phone_number,true);
-		$criteria->compare('region_id',$this->region_id,true);
-		$criteria->compare('created_at',$this->created_at,true);
-		$criteria->compare('updated_at',$this->updated_at,true);
+		$criteria->compare('id', $this->id, true);
+		$criteria->compare('name', $this->name, true);
+		$criteria->compare('birth_date', $this->birth_date, true);
+		$criteria->compare('gender', $this->gender, true);
+		$criteria->compare('address', $this->address, true);
+		$criteria->compare('phone_number', $this->phone_number, true);
+		$criteria->compare('region_id', $this->region_id, true);
+		$criteria->compare('created_at', $this->created_at, true);
+		$criteria->compare('updated_at', $this->updated_at, true);
 
 		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
+			'criteria' => $criteria,
 		));
 	}
 
@@ -110,7 +111,7 @@ class Patient extends CActiveRecord
 	 * @param string $className active record class name.
 	 * @return Patient the static model class
 	 */
-	public static function model($className=__CLASS__)
+	public static function model($className = __CLASS__)
 	{
 		return parent::model($className);
 	}
