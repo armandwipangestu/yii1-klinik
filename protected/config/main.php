@@ -34,6 +34,7 @@ return array(
 	'components' => array(
 
 		'user' => array(
+			'class' => 'WebUser',
 			// enable cookie-based authentication
 			'allowAutoLogin' => true,
 		),

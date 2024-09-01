@@ -31,10 +31,9 @@ class User extends CActiveRecord
 		return array(
 			array('username, password, role_id', 'required'),
 			array('username, password', 'length', 'max' => 255),
-			array('created_at, updated_at', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, username, password, role_id, created_at, updated_at', 'safe', 'on' => 'search'),
+			array('id, username, password, role_id', 'safe', 'on' => 'search'),
 		);
 	}
 
@@ -45,7 +44,9 @@ class User extends CActiveRecord
 	{
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
-		return array();
+		return array(
+			'role' => array(self::BELONGS_TO, 'Role', 'role_id'),
+		);
 	}
 
 	/**
@@ -112,5 +113,37 @@ class User extends CActiveRecord
 	public function hashPassword($password)
 	{
 		return CPasswordHelper::hashPassword($password);
+	}
+
+	public function beforeSave()
+	{
+		if (parent::beforeSave()) {
+			// Cek apakah password sudah diubah
+			if ($this->isNewRecord || $this->password !== $this->getOldAttribute('password')) {
+				$this->password = $this->hashPassword($this->password);
+			}
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public function getOldAttribute($attribute)
+	{
+		return $this->isNewRecord ? null : $this->getOldAttributes()[$attribute];
+	}
+
+	private $_oldAttributes = [];
+
+	protected function afterFind()
+	{
+		// Simpan nilai-nilai asli setelah model ditemukan
+		$this->_oldAttributes = $this->attributes;
+		parent::afterFind();
+	}
+
+	public function getOldAttributes()
+	{
+		return $this->_oldAttributes;
 	}
 }
