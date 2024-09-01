@@ -4,17 +4,18 @@
 $this->pageTitle = Yii::app()->name;
 ?>
 
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
+<h1>Selamat datang di aplikasi <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
 
-<p>Congratulations! You have successfully created your Yii application.</p>
+<p>Aplikasi ini adalah hasil Tes Skill Web Programmer GRIT dari PT Inova Medika Solusindo</p>
 
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <code><?php echo __FILE__; ?></code></li>
-	<li>Layout file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
-</ul>
+<p>Aplikasi ini mempunyai kriteria sebagai berikut:</p>
+<ol>
+	<li>Terdapat user login berdasarkan hak aksesnya (SRBAC)</li>
+	<li>Terdapat master CRUD untuk pembuatan master wilayah, user, dan pegawai, tindakan, obat</li>
+	<li>Terdapat menu transaksi untuk pendaftaran pasien</li>
+	<li>Terdapat menu transaksi untuk memberikan tindakan dan obat pada pasien</li>
+	<li>Terdapat menu informasi untuk melakukan pembayaran tagihan pasien</li>
+	<li>Terdapat menu laporan yang dapat ditampilkan dengan grafik</li>
+</ol>
 
-<p>For more details on how to further develop this application, please read
-	the <a href="https://www.yiiframework.com/doc/">documentation</a>.
-	Feel free to ask in the <a href="https://www.yiiframework.com/forum/">forum</a>,
-	should you have any questions.</p>
+<p>Aplikasi ini dibuat oleh <a href="https://armandwipangestu.vercel.app" target="_blank">Arman Dwi Pangestu</a>. Source code aplikasi ini tersedia di <a href="https://github.com/armandwipangestu/yii1-klinik" target="_blank">GitHub - yii1-klinik</a></p>
