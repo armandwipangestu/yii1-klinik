@@ -42,7 +42,7 @@ Untuk menjalankan aplikasi sistem informasi klinik di localhost, ikuti langkah-l
 
 Clone repository dari GitHub ke lokal Anda dengan menggunakan perintah berikut:
 
-> ![IMPORTANT]
+> [!IMPORTANT]
 > Simpan folder hasil cloning an repository ini didalam folder www atau htdocs (folder yang accessible untuk web server seperti Nginx atau Apache)
 
 ```bash
@@ -52,7 +52,7 @@ cd yii1-klinik
 
 2. Setup Database
 
-> ![WARNING]
+> [!WARNING]
 > Sebelum melakukan import database, buat terlebih dahulu database kosong menggunakan perintah berikut ini:
 >
 > ```sql
@@ -61,7 +61,7 @@ cd yii1-klinik
 
 - Import file dump database `yii1_klinik.sql` yang terletak di root folder aplikasi ke dalam MySQL. Gunakan perintah berikut di terminal atau command prompt:
 
-> ![TIP]
+> [!TIP]
 > Jika kalian menggunakan terminal powershell bisa melakukan import database nya dengan perintah berikut ini
 >
 > ```ps
@@ -72,7 +72,7 @@ cd yii1-klinik
 mysql -u [username] -p [database_name] < yii1_klinik.sql
 ```
 
-> ![IMPORTANT]
+> [!IMPORTANT]
 > Gantilah `[username]` dengan nama pengguna MySQL Anda dan `[database_name]` dengan nama database yang Anda buat.
 
 - Konfigurasi kredensial database di file `protected/config/database.php`. Buka file tersebut dan ubah pengaturan database sesuai dengan kredensial MySQL Anda:
@@ -88,7 +88,7 @@ return array(
 );
 ```
 
-> ![IMPORTANT]
+> [!IMPORTANT]
 > Gantilah `[database_name]`, `[username]`, dan `[password]` dengan informasi yang sesuai.
 
 3. Instalasi Dependensi
@@ -113,7 +113,7 @@ Atau, jika Anda menggunakan server web seperti Apache atau Nginx, pastikan konfi
 
 Buka browser Anda dan akses aplikasi di `http://localhost/[path_to_application]` untuk melihat aplikasi berjalan di localhost.
 
-> ![NOTE]
+> [!NOTE]
 > Jika Anda mengalami masalah selama proses ini, pastikan Anda memeriksa konfigurasi database dan dependensi yang diperlukan.
 
 ## List Default Account Login
