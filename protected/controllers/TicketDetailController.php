@@ -6,7 +6,7 @@ class TicketDetailController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	public $layout = '//layouts/column2';
 
 	/**
 	 * @return array action filters
@@ -27,20 +27,24 @@ class TicketDetailController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
+			array(
+				'allow',  // allow all users to perform 'index' and 'view' actions
+				'actions' => array('index', 'view'),
+				// 'users' => array('*'),
+				'roles' => array('user', 'admin'),
 			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
+			// array('allow', // allow authenticated user to perform 'create' and 'update' actions
+			// 	'actions'=>array('create','update'),
+			// 	'users'=>array('@'),
+			// ),
+			array(
+				'allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions' => array('admin', 'create', 'update', 'delete'),
+				'roles' => array('admin'),
 			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
-			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
+			array(
+				'deny',  // deny all users
+				'users' => array('*'),
 			),
 		);
 	}
@@ -51,8 +55,8 @@ class TicketDetailController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+		$this->render('view', array(
+			'model' => $this->loadModel($id),
 		));
 	}
 
@@ -62,20 +66,31 @@ class TicketDetailController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new TicketDetail;
+		$model = new TicketDetail;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['TicketDetail']))
-		{
-			$model->attributes=$_POST['TicketDetail'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+		$tickets = Ticket::model()->findAll();
+		$ticketOptions = CHtml::listData($tickets, 'id', 'id');
+
+		$actions = Action::model()->findAll();
+		$actionOptions = CHtml::listData($actions, 'id', 'name');
+
+		$medications = Medication::model()->findAll();
+		$medicationOptions = CHtml::listData($medications, 'id', 'name');
+
+		if (isset($_POST['TicketDetail'])) {
+			$model->attributes = $_POST['TicketDetail'];
+			if ($model->save())
+				$this->redirect(array('view', 'id' => $model->id));
 		}
 
-		$this->render('create',array(
-			'model'=>$model,
+		$this->render('create', array(
+			'model' => $model,
+			'ticketOptions' => $ticketOptions,
+			'actionOptions' => $actionOptions,
+			'medicationOptions' => $medicationOptions,
 		));
 	}
 
@@ -86,20 +101,31 @@ class TicketDetailController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
+		$model = $this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['TicketDetail']))
-		{
-			$model->attributes=$_POST['TicketDetail'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+		$tickets = Ticket::model()->findAll();
+		$ticketOptions = CHtml::listData($tickets, 'id', 'id');
+
+		$actions = Action::model()->findAll();
+		$actionOptions = CHtml::listData($actions, 'id', 'name');
+
+		$medications = Medication::model()->findAll();
+		$medicationOptions = CHtml::listData($medications, 'id', 'name');
+
+		if (isset($_POST['TicketDetail'])) {
+			$model->attributes = $_POST['TicketDetail'];
+			if ($model->save())
+				$this->redirect(array('view', 'id' => $model->id));
 		}
 
-		$this->render('update',array(
-			'model'=>$model,
+		$this->render('update', array(
+			'model' => $model,
+			'ticketOptions' => $ticketOptions,
+			'actionOptions' => $actionOptions,
+			'medicationOptions' => $medicationOptions,
 		));
 	}
 
@@ -113,7 +139,7 @@ class TicketDetailController extends Controller
 		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
+		if (!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
@@ -122,9 +148,9 @@ class TicketDetailController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('TicketDetail');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+		$dataProvider = new CActiveDataProvider('TicketDetail');
+		$this->render('index', array(
+			'dataProvider' => $dataProvider,
 		));
 	}
 
@@ -133,13 +159,13 @@ class TicketDetailController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new TicketDetail('search');
+		$model = new TicketDetail('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['TicketDetail']))
-			$model->attributes=$_GET['TicketDetail'];
+		if (isset($_GET['TicketDetail']))
+			$model->attributes = $_GET['TicketDetail'];
 
-		$this->render('admin',array(
-			'model'=>$model,
+		$this->render('admin', array(
+			'model' => $model,
 		));
 	}
 
@@ -152,9 +178,9 @@ class TicketDetailController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=TicketDetail::model()->findByPk($id);
-		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');
+		$model = TicketDetail::model()->findByPk($id);
+		if ($model === null)
+			throw new CHttpException(404, 'The requested page does not exist.');
 		return $model;
 	}
 
@@ -164,8 +190,7 @@ class TicketDetailController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='ticket-detail-form')
-		{
+		if (isset($_POST['ajax']) && $_POST['ajax'] === 'ticket-detail-form') {
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}

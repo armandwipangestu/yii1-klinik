@@ -29,12 +29,12 @@ class Action extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name, price', 'required'),
-			array('name', 'length', 'max'=>255),
-			array('price', 'length', 'max'=>8),
+			array('name', 'length', 'max' => 255),
+			array('price', 'length', 'max' => 8),
 			array('created_at, updated_at', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, price, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('id, name, price, created_at, updated_at', 'safe', 'on' => 'search'),
 		);
 	}
 
@@ -46,6 +46,7 @@ class Action extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'ticketDetail' => array(self::HAS_ONE, 'TicketDetail', 'action_id'),
 		);
 	}
 
@@ -79,16 +80,16 @@ class Action extends CActiveRecord
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
-		$criteria=new CDbCriteria;
+		$criteria = new CDbCriteria;
 
-		$criteria->compare('id',$this->id,true);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('price',$this->price,true);
-		$criteria->compare('created_at',$this->created_at,true);
-		$criteria->compare('updated_at',$this->updated_at,true);
+		$criteria->compare('id', $this->id, true);
+		$criteria->compare('name', $this->name, true);
+		$criteria->compare('price', $this->price, true);
+		$criteria->compare('created_at', $this->created_at, true);
+		$criteria->compare('updated_at', $this->updated_at, true);
 
 		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
+			'criteria' => $criteria,
 		));
 	}
 
@@ -98,7 +99,7 @@ class Action extends CActiveRecord
 	 * @param string $className active record class name.
 	 * @return Action the static model class
 	 */
-	public static function model($className=__CLASS__)
+	public static function model($className = __CLASS__)
 	{
 		return parent::model($className);
 	}

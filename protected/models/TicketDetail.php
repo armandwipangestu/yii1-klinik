@@ -32,12 +32,12 @@ class TicketDetail extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('ticket_id, action_id, medication_id, quantity, total_price', 'required'),
-			array('quantity', 'numerical', 'integerOnly'=>true),
-			array('total_price', 'length', 'max'=>8),
+			array('quantity', 'numerical', 'integerOnly' => true),
+			array('total_price', 'length', 'max' => 8),
 			array('created_at, updated_at', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, ticket_id, action_id, medication_id, quantity, total_price, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('id, ticket_id, action_id, medication_id, quantity, total_price, created_at, updated_at', 'safe', 'on' => 'search'),
 		);
 	}
 
@@ -49,6 +49,9 @@ class TicketDetail extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'ticket' => array(self::BELONGS_TO, 'Ticket', 'ticket_id'),
+			'action' => array(self::BELONGS_TO, 'Action', 'action_id'),
+			'medication' => array(self::BELONGS_TO, 'Medication', 'medication_id'),
 		);
 	}
 
@@ -85,19 +88,19 @@ class TicketDetail extends CActiveRecord
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
-		$criteria=new CDbCriteria;
+		$criteria = new CDbCriteria;
 
-		$criteria->compare('id',$this->id,true);
-		$criteria->compare('ticket_id',$this->ticket_id,true);
-		$criteria->compare('action_id',$this->action_id,true);
-		$criteria->compare('medication_id',$this->medication_id,true);
-		$criteria->compare('quantity',$this->quantity);
-		$criteria->compare('total_price',$this->total_price,true);
-		$criteria->compare('created_at',$this->created_at,true);
-		$criteria->compare('updated_at',$this->updated_at,true);
+		$criteria->compare('id', $this->id, true);
+		$criteria->compare('ticket_id', $this->ticket_id, true);
+		$criteria->compare('action_id', $this->action_id, true);
+		$criteria->compare('medication_id', $this->medication_id, true);
+		$criteria->compare('quantity', $this->quantity);
+		$criteria->compare('total_price', $this->total_price, true);
+		$criteria->compare('created_at', $this->created_at, true);
+		$criteria->compare('updated_at', $this->updated_at, true);
 
 		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
+			'criteria' => $criteria,
 		));
 	}
 
@@ -107,7 +110,7 @@ class TicketDetail extends CActiveRecord
 	 * @param string $className active record class name.
 	 * @return TicketDetail the static model class
 	 */
-	public static function model($className=__CLASS__)
+	public static function model($className = __CLASS__)
 	{
 		return parent::model($className);
 	}

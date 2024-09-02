@@ -2025,3 +2025,121 @@ REQUEST_URI=/index.php?r=ticket/update&id=1
 in Z:\laragon\www\yii1-klinik\protected\views\ticket\_form.php (24)
 in Z:\laragon\www\yii1-klinik\protected\views\ticket\update.php (21)
 in Z:\laragon\www\yii1-klinik\protected\controllers\TicketController.php (115)
+2024/09/02 04:46:12 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in Z:\laragon\www\yii1\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 Z:\laragon\www\yii1\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 Z:\laragon\www\yii1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\laragon\www\yii1\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 Z:\laragon\www\yii1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\laragon\www\yii1\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\laragon\www\yii1\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\laragon\www\yii1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\laragon\www\yii1\framework\web\CWebApplication.php(282): CController->run('create')
+#8 Z:\laragon\www\yii1\framework\web\CWebApplication.php(141): CWebApplication->runController('ticket/create')
+#9 Z:\laragon\www\yii1\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 Z:\laragon\www\yii1-klinik\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=ticket/create
+HTTP_REFERER=https://yii1-klinik.dev/index.php?r=ticket/index
+---
+2024/09/02 04:46:15 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in Z:\laragon\www\yii1\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 Z:\laragon\www\yii1\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 Z:\laragon\www\yii1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\laragon\www\yii1\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 Z:\laragon\www\yii1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\laragon\www\yii1\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\laragon\www\yii1\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\laragon\www\yii1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\laragon\www\yii1\framework\web\CWebApplication.php(282): CController->run('create')
+#8 Z:\laragon\www\yii1\framework\web\CWebApplication.php(141): CWebApplication->runController('medication/crea...')
+#9 Z:\laragon\www\yii1\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 Z:\laragon\www\yii1-klinik\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=medication/create
+HTTP_REFERER=https://yii1-klinik.dev/index.php?r=medication/index
+---
+2024/09/02 04:46:19 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in Z:\laragon\www\yii1\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 Z:\laragon\www\yii1\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 Z:\laragon\www\yii1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\laragon\www\yii1\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 Z:\laragon\www\yii1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\laragon\www\yii1\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\laragon\www\yii1\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\laragon\www\yii1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\laragon\www\yii1\framework\web\CWebApplication.php(282): CController->run('create')
+#8 Z:\laragon\www\yii1\framework\web\CWebApplication.php(141): CWebApplication->runController('action/create')
+#9 Z:\laragon\www\yii1\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 Z:\laragon\www\yii1-klinik\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=action/create
+HTTP_REFERER=https://yii1-klinik.dev/index.php?r=action/index
+---
+2024/09/02 04:46:22 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in Z:\laragon\www\yii1\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 Z:\laragon\www\yii1\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 Z:\laragon\www\yii1\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\laragon\www\yii1\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 Z:\laragon\www\yii1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\laragon\www\yii1\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\laragon\www\yii1\framework\web\CController.php(291): CFilterChain->run()
+#6 Z:\laragon\www\yii1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\laragon\www\yii1\framework\web\CWebApplication.php(282): CController->run('create')
+#8 Z:\laragon\www\yii1\framework\web\CWebApplication.php(141): CWebApplication->runController('employee/create')
+#9 Z:\laragon\www\yii1\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 Z:\laragon\www\yii1-klinik\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=employee/create
+HTTP_REFERER=https://yii1-klinik.dev/index.php?r=employee/index
+---
+2024/09/02 04:56:50 [error] [exception.ArgumentCountError] ArgumentCountError: Too few arguments to function CHtml::listData(), 2 passed in Z:\laragon\www\yii1-klinik\protected\controllers\TicketDetailController.php on line 75 and at least 3 expected in Z:\laragon\www\yii1\framework\web\helpers\CHtml.php:2313
+Stack trace:
+#0 Z:\laragon\www\yii1-klinik\protected\controllers\TicketDetailController.php(75): CHtml::listData(Array, 'id')
+#1 Z:\laragon\www\yii1\framework\web\actions\CInlineAction.php(49): TicketDetailController->actionCreate()
+#2 Z:\laragon\www\yii1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 Z:\laragon\www\yii1\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 Z:\laragon\www\yii1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 Z:\laragon\www\yii1\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#6 Z:\laragon\www\yii1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 Z:\laragon\www\yii1\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 Z:\laragon\www\yii1\framework\web\CController.php(291): CFilterChain->run()
+#9 Z:\laragon\www\yii1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 Z:\laragon\www\yii1\framework\web\CWebApplication.php(282): CController->run('create')
+#11 Z:\laragon\www\yii1\framework\web\CWebApplication.php(141): CWebApplication->runController('ticketDetail/cr...')
+#12 Z:\laragon\www\yii1\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#13 Z:\laragon\www\yii1-klinik\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=ticketDetail/create
+HTTP_REFERER=https://yii1-klinik.dev/index.php?r=ticketDetail/view&id=1
+---
+2024/09/02 04:59:38 [error] [php] Undefined variable $ticketOptions (Z:\laragon\www\yii1-klinik\protected\views\ticketDetail\_form.php:24)
+Stack trace:
+#0 Z:\laragon\www\yii1\framework\web\CBaseController.php(126): require()
+#1 Z:\laragon\www\yii1\framework\web\CBaseController.php(95): TicketDetailController->renderInternal()
+#2 Z:\laragon\www\yii1\framework\web\CController.php(872): TicketDetailController->renderFile()
+#3 Z:\laragon\www\yii1-klinik\protected\views\ticketDetail\update.php(21): TicketDetailController->renderPartial()
+#4 Z:\laragon\www\yii1\framework\web\CBaseController.php(126): require()
+#5 Z:\laragon\www\yii1\framework\web\CBaseController.php(95): TicketDetailController->renderInternal()
+#6 Z:\laragon\www\yii1\framework\web\CController.php(872): TicketDetailController->renderFile()
+#7 Z:\laragon\www\yii1\framework\web\CController.php(785): TicketDetailController->renderPartial()
+#8 Z:\laragon\www\yii1-klinik\protected\controllers\TicketDetailController.php(115): TicketDetailController->render()
+#9 unknown(0): TicketDetailController->actionUpdate()
+#10 Z:\laragon\www\yii1\framework\web\actions\CAction.php(114): ReflectionMethod->invokeArgs()
+#11 Z:\laragon\www\yii1\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#12 Z:\laragon\www\yii1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 Z:\laragon\www\yii1\framework\web\filters\CFilterChain.php(134): TicketDetailController->runAction()
+#14 Z:\laragon\www\yii1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 Z:\laragon\www\yii1\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#16 Z:\laragon\www\yii1\framework\web\filters\CInlineFilter.php(58): TicketDetailController->filterAccessControl()
+#17 Z:\laragon\www\yii1\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#18 Z:\laragon\www\yii1\framework\web\CController.php(291): CFilterChain->run()
+#19 Z:\laragon\www\yii1\framework\web\CController.php(265): TicketDetailController->runActionWithFilters()
+#20 Z:\laragon\www\yii1\framework\web\CWebApplication.php(282): TicketDetailController->run()
+#21 Z:\laragon\www\yii1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 Z:\laragon\www\yii1\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#23 Z:\laragon\www\yii1-klinik\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=ticketDetail/update&id=11
+in Z:\laragon\www\yii1-klinik\protected\views\ticketDetail\_form.php (24)
+in Z:\laragon\www\yii1-klinik\protected\views\ticketDetail\update.php (21)
+in Z:\laragon\www\yii1-klinik\protected\controllers\TicketDetailController.php (115)
