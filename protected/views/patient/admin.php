@@ -48,7 +48,14 @@ $('.search-form form').submit(function(){
 		'id',
 		'name',
 		'birth_date',
-		'gender',
+		array(
+			'name' => 'gender',
+			'value' => '$data->gender', // Menampilkan nilai gender
+			'filter' => array(
+				'Male' => 'Male',
+				'Female' => 'Female',
+			), // Dropdown filter untuk gender
+		),
 		'address',
 		'phone_number',
 		array(
