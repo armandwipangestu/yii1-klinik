@@ -3213,3 +3213,265 @@ HTTP_REFERER=https://yii1-klinik.dev/index.php?r=division/create
 2024/09/02 11:57:17 [warning] [application] Failed to set unsafe attribute "id" of "Ticket".
 in Z:\laragon\www\yii1-klinik\protected\controllers\TicketController.php (181)
 in Z:\laragon\www\yii1-klinik\index.php (13)
+2024/09/02 13:15:51 [error] [php] Undefined variable $total_account (Z:\laragon\www\yii1-klinik\protected\views\report\index.php:25)
+Stack trace:
+#0 Z:\laragon\www\yii1\framework\web\CBaseController.php(126): require()
+#1 Z:\laragon\www\yii1\framework\web\CBaseController.php(95): ReportController->renderInternal()
+#2 Z:\laragon\www\yii1\framework\web\CController.php(872): ReportController->renderFile()
+#3 Z:\laragon\www\yii1\framework\web\CController.php(785): ReportController->renderPartial()
+#4 Z:\laragon\www\yii1-klinik\protected\controllers\ReportController.php(7): ReportController->render()
+#5 Z:\laragon\www\yii1\framework\web\actions\CInlineAction.php(49): ReportController->actionIndex()
+#6 Z:\laragon\www\yii1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 Z:\laragon\www\yii1\framework\web\CController.php(286): ReportController->runAction()
+#8 Z:\laragon\www\yii1\framework\web\CController.php(265): ReportController->runActionWithFilters()
+#9 Z:\laragon\www\yii1\framework\web\CWebApplication.php(282): ReportController->run()
+#10 Z:\laragon\www\yii1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 Z:\laragon\www\yii1\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 Z:\laragon\www\yii1-klinik\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=report/index
+in Z:\laragon\www\yii1-klinik\protected\views\report\index.php (25)
+in Z:\laragon\www\yii1-klinik\protected\controllers\ReportController.php (7)
+in Z:\laragon\www\yii1-klinik\index.php (13)
+2024/09/02 13:15:52 [error] [php] Undefined variable $total_account (Z:\laragon\www\yii1-klinik\protected\views\report\index.php:25)
+Stack trace:
+#0 Z:\laragon\www\yii1\framework\web\CBaseController.php(126): require()
+#1 Z:\laragon\www\yii1\framework\web\CBaseController.php(95): ReportController->renderInternal()
+#2 Z:\laragon\www\yii1\framework\web\CController.php(872): ReportController->renderFile()
+#3 Z:\laragon\www\yii1\framework\web\CController.php(785): ReportController->renderPartial()
+#4 Z:\laragon\www\yii1-klinik\protected\controllers\ReportController.php(7): ReportController->render()
+#5 Z:\laragon\www\yii1\framework\web\actions\CInlineAction.php(49): ReportController->actionIndex()
+#6 Z:\laragon\www\yii1\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 Z:\laragon\www\yii1\framework\web\CController.php(286): ReportController->runAction()
+#8 Z:\laragon\www\yii1\framework\web\CController.php(265): ReportController->runActionWithFilters()
+#9 Z:\laragon\www\yii1\framework\web\CWebApplication.php(282): ReportController->run()
+#10 Z:\laragon\www\yii1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 Z:\laragon\www\yii1\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 Z:\laragon\www\yii1-klinik\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=report/index
+in Z:\laragon\www\yii1-klinik\protected\views\report\index.php (25)
+in Z:\laragon\www\yii1-klinik\protected\controllers\ReportController.php (7)
+in Z:\laragon\www\yii1-klinik\index.php (13)
+2024/09/02 13:23:44 [error] [exception.CException] CException: Property "Patient.total" is not defined. in Z:\laragon\www\yii1\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\laragon\www\yii1\framework\db\ar\CActiveRecord.php(145): CComponent->__get('total')
+#1 Z:\laragon\www\yii1-klinik\protected\controllers\ReportController.php(17): CActiveRecord->__get('total')
+#2 Z:\laragon\www\yii1\framework\web\actions\CInlineAction.php(49): ReportController->actionIndex()
+#3 Z:\laragon\www\yii1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 Z:\laragon\www\yii1\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 Z:\laragon\www\yii1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 Z:\laragon\www\yii1\framework\web\CWebApplication.php(282): CController->run('index')
+#7 Z:\laragon\www\yii1\framework\web\CWebApplication.php(141): CWebApplication->runController('report/index')
+#8 Z:\laragon\www\yii1\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 Z:\laragon\www\yii1-klinik\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php?r=report/index
+HTTP_REFERER=https://yii1-klinik.dev/index.php?r=site/index
+---
+2024/09/02 13:54:20 [error] [exception.Error] Error: Call to undefined method Yii::auth() in Z:\laragon\www\yii1-klinik\protected\views\report\index.php:255
+Stack trace:
+#0 Z:\laragon\www\yii1\framework\web\CBaseController.php(126): require()
+#1 Z:\laragon\www\yii1\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\\laragon\\www\\...', Array, true)
+#2 Z:\laragon\www\yii1\framework\web\CController.php(872): CBaseController->renderFile('Z:\\laragon\\www\\...', Array, true)
+#3 Z:\laragon\www\yii1\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#4 Z:\laragon\www\yii1-klinik\protected\controllers\ReportController.php(42): CController->render('index', Array)
+#5 Z:\laragon\www\yii1\framework\web\actions\CInlineAction.php(49): ReportController->actionIndex()
+#6 Z:\laragon\www\yii1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 Z:\laragon\www\yii1\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 Z:\laragon\www\yii1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 Z:\laragon\www\yii1\framework\web\CWebApplication.php(282): CController->run('index')
+#10 Z:\laragon\www\yii1\framework\web\CWebApplication.php(141): CWebApplication->runController('report/index')
+#11 Z:\laragon\www\yii1\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 Z:\laragon\www\yii1-klinik\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php?r=report/index
+HTTP_REFERER=https://yii1-klinik.dev/index.php?r=site/index
+---
+2024/09/02 13:55:07 [error] [exception.CException] CException: Property "WebUser.username" is not defined. in Z:\laragon\www\yii1\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\laragon\www\yii1\framework\web\auth\CWebUser.php(146): CComponent->__get('username')
+#1 Z:\laragon\www\yii1-klinik\protected\views\report\index.php(255): CWebUser->__get('username')
+#2 Z:\laragon\www\yii1\framework\web\CBaseController.php(126): require('Z:\\laragon\\www\\...')
+#3 Z:\laragon\www\yii1\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\\laragon\\www\\...', Array, true)
+#4 Z:\laragon\www\yii1\framework\web\CController.php(872): CBaseController->renderFile('Z:\\laragon\\www\\...', Array, true)
+#5 Z:\laragon\www\yii1\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#6 Z:\laragon\www\yii1-klinik\protected\controllers\ReportController.php(42): CController->render('index', Array)
+#7 Z:\laragon\www\yii1\framework\web\actions\CInlineAction.php(49): ReportController->actionIndex()
+#8 Z:\laragon\www\yii1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 Z:\laragon\www\yii1\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 Z:\laragon\www\yii1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\laragon\www\yii1\framework\web\CWebApplication.php(282): CController->run('index')
+#12 Z:\laragon\www\yii1\framework\web\CWebApplication.php(141): CWebApplication->runController('report/index')
+#13 Z:\laragon\www\yii1\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 Z:\laragon\www\yii1-klinik\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=report/index
+HTTP_REFERER=https://yii1-klinik.dev/index.php?r=site/index
+---
+2024/09/02 13:55:42 [error] [exception.CException] CException: Property "WebUser.username" is not defined. in Z:\laragon\www\yii1\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\laragon\www\yii1\framework\web\auth\CWebUser.php(146): CComponent->__get('username')
+#1 Z:\laragon\www\yii1-klinik\protected\views\report\index.php(255): CWebUser->__get('username')
+#2 Z:\laragon\www\yii1\framework\web\CBaseController.php(126): require('Z:\\laragon\\www\\...')
+#3 Z:\laragon\www\yii1\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\\laragon\\www\\...', Array, true)
+#4 Z:\laragon\www\yii1\framework\web\CController.php(872): CBaseController->renderFile('Z:\\laragon\\www\\...', Array, true)
+#5 Z:\laragon\www\yii1\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#6 Z:\laragon\www\yii1-klinik\protected\controllers\ReportController.php(42): CController->render('index', Array)
+#7 Z:\laragon\www\yii1\framework\web\actions\CInlineAction.php(49): ReportController->actionIndex()
+#8 Z:\laragon\www\yii1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 Z:\laragon\www\yii1\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 Z:\laragon\www\yii1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\laragon\www\yii1\framework\web\CWebApplication.php(282): CController->run('index')
+#12 Z:\laragon\www\yii1\framework\web\CWebApplication.php(141): CWebApplication->runController('report/index')
+#13 Z:\laragon\www\yii1\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 Z:\laragon\www\yii1-klinik\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=report/index
+HTTP_REFERER=https://yii1-klinik.dev/index.php?r=site/index
+---
+2024/09/02 13:55:48 [error] [exception.CException] CException: Property "WebUser.username" is not defined. in Z:\laragon\www\yii1\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\laragon\www\yii1\framework\web\auth\CWebUser.php(146): CComponent->__get('username')
+#1 Z:\laragon\www\yii1-klinik\protected\views\report\index.php(255): CWebUser->__get('username')
+#2 Z:\laragon\www\yii1\framework\web\CBaseController.php(126): require('Z:\\laragon\\www\\...')
+#3 Z:\laragon\www\yii1\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\\laragon\\www\\...', Array, true)
+#4 Z:\laragon\www\yii1\framework\web\CController.php(872): CBaseController->renderFile('Z:\\laragon\\www\\...', Array, true)
+#5 Z:\laragon\www\yii1\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#6 Z:\laragon\www\yii1-klinik\protected\controllers\ReportController.php(42): CController->render('index', Array)
+#7 Z:\laragon\www\yii1\framework\web\actions\CInlineAction.php(49): ReportController->actionIndex()
+#8 Z:\laragon\www\yii1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 Z:\laragon\www\yii1\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 Z:\laragon\www\yii1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\laragon\www\yii1\framework\web\CWebApplication.php(282): CController->run('index')
+#12 Z:\laragon\www\yii1\framework\web\CWebApplication.php(141): CWebApplication->runController('report/index')
+#13 Z:\laragon\www\yii1\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 Z:\laragon\www\yii1-klinik\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=report/index
+HTTP_REFERER=https://yii1-klinik.dev/index.php?r=site/index
+---
+2024/09/02 13:55:50 [error] [exception.CException] CException: Property "WebUser.username" is not defined. in Z:\laragon\www\yii1\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\laragon\www\yii1\framework\web\auth\CWebUser.php(146): CComponent->__get('username')
+#1 Z:\laragon\www\yii1-klinik\protected\views\report\index.php(255): CWebUser->__get('username')
+#2 Z:\laragon\www\yii1\framework\web\CBaseController.php(126): require('Z:\\laragon\\www\\...')
+#3 Z:\laragon\www\yii1\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\\laragon\\www\\...', Array, true)
+#4 Z:\laragon\www\yii1\framework\web\CController.php(872): CBaseController->renderFile('Z:\\laragon\\www\\...', Array, true)
+#5 Z:\laragon\www\yii1\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#6 Z:\laragon\www\yii1-klinik\protected\controllers\ReportController.php(42): CController->render('index', Array)
+#7 Z:\laragon\www\yii1\framework\web\actions\CInlineAction.php(49): ReportController->actionIndex()
+#8 Z:\laragon\www\yii1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 Z:\laragon\www\yii1\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 Z:\laragon\www\yii1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\laragon\www\yii1\framework\web\CWebApplication.php(282): CController->run('index')
+#12 Z:\laragon\www\yii1\framework\web\CWebApplication.php(141): CWebApplication->runController('report/index')
+#13 Z:\laragon\www\yii1\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 Z:\laragon\www\yii1-klinik\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=report/index
+HTTP_REFERER=https://yii1-klinik.dev/index.php?r=site/index
+---
+2024/09/02 13:56:10 [error] [exception.CException] CException: Property "WebUser.username" is not defined. in Z:\laragon\www\yii1\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\laragon\www\yii1\framework\web\auth\CWebUser.php(146): CComponent->__get('username')
+#1 Z:\laragon\www\yii1-klinik\protected\views\report\index.php(255): CWebUser->__get('username')
+#2 Z:\laragon\www\yii1\framework\web\CBaseController.php(126): require('Z:\\laragon\\www\\...')
+#3 Z:\laragon\www\yii1\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\\laragon\\www\\...', Array, true)
+#4 Z:\laragon\www\yii1\framework\web\CController.php(872): CBaseController->renderFile('Z:\\laragon\\www\\...', Array, true)
+#5 Z:\laragon\www\yii1\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#6 Z:\laragon\www\yii1-klinik\protected\controllers\ReportController.php(42): CController->render('index', Array)
+#7 Z:\laragon\www\yii1\framework\web\actions\CInlineAction.php(49): ReportController->actionIndex()
+#8 Z:\laragon\www\yii1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 Z:\laragon\www\yii1\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 Z:\laragon\www\yii1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\laragon\www\yii1\framework\web\CWebApplication.php(282): CController->run('index')
+#12 Z:\laragon\www\yii1\framework\web\CWebApplication.php(141): CWebApplication->runController('report/index')
+#13 Z:\laragon\www\yii1\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 Z:\laragon\www\yii1-klinik\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=report/index
+HTTP_REFERER=https://yii1-klinik.dev/index.php?r=site/index
+---
+2024/09/02 13:56:12 [error] [exception.CException] CException: Property "WebUser.username" is not defined. in Z:\laragon\www\yii1\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\laragon\www\yii1\framework\web\auth\CWebUser.php(146): CComponent->__get('username')
+#1 Z:\laragon\www\yii1-klinik\protected\views\report\index.php(255): CWebUser->__get('username')
+#2 Z:\laragon\www\yii1\framework\web\CBaseController.php(126): require('Z:\\laragon\\www\\...')
+#3 Z:\laragon\www\yii1\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\\laragon\\www\\...', Array, true)
+#4 Z:\laragon\www\yii1\framework\web\CController.php(872): CBaseController->renderFile('Z:\\laragon\\www\\...', Array, true)
+#5 Z:\laragon\www\yii1\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#6 Z:\laragon\www\yii1-klinik\protected\controllers\ReportController.php(42): CController->render('index', Array)
+#7 Z:\laragon\www\yii1\framework\web\actions\CInlineAction.php(49): ReportController->actionIndex()
+#8 Z:\laragon\www\yii1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 Z:\laragon\www\yii1\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 Z:\laragon\www\yii1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\laragon\www\yii1\framework\web\CWebApplication.php(282): CController->run('index')
+#12 Z:\laragon\www\yii1\framework\web\CWebApplication.php(141): CWebApplication->runController('report/index')
+#13 Z:\laragon\www\yii1\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 Z:\laragon\www\yii1-klinik\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=report/index
+HTTP_REFERER=https://yii1-klinik.dev/index.php?r=site/index
+---
+2024/09/02 13:57:25 [error] [exception.CException] CException: Property "WebUser.username" is not defined. in Z:\laragon\www\yii1\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\laragon\www\yii1\framework\web\auth\CWebUser.php(146): CComponent->__get('username')
+#1 Z:\laragon\www\yii1-klinik\protected\views\report\index.php(255): CWebUser->__get('username')
+#2 Z:\laragon\www\yii1\framework\web\CBaseController.php(126): require('Z:\\laragon\\www\\...')
+#3 Z:\laragon\www\yii1\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\\laragon\\www\\...', Array, true)
+#4 Z:\laragon\www\yii1\framework\web\CController.php(872): CBaseController->renderFile('Z:\\laragon\\www\\...', Array, true)
+#5 Z:\laragon\www\yii1\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#6 Z:\laragon\www\yii1-klinik\protected\controllers\ReportController.php(42): CController->render('index', Array)
+#7 Z:\laragon\www\yii1\framework\web\actions\CInlineAction.php(49): ReportController->actionIndex()
+#8 Z:\laragon\www\yii1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 Z:\laragon\www\yii1\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 Z:\laragon\www\yii1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\laragon\www\yii1\framework\web\CWebApplication.php(282): CController->run('index')
+#12 Z:\laragon\www\yii1\framework\web\CWebApplication.php(141): CWebApplication->runController('report/index')
+#13 Z:\laragon\www\yii1\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 Z:\laragon\www\yii1-klinik\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=report/index
+HTTP_REFERER=https://yii1-klinik.dev/index.php
+---
+2024/09/02 13:57:57 [error] [exception.CException] CException: Property "WebUser.username" is not defined. in Z:\laragon\www\yii1\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\laragon\www\yii1\framework\web\auth\CWebUser.php(146): CComponent->__get('username')
+#1 Z:\laragon\www\yii1-klinik\protected\views\report\index.php(255): CWebUser->__get('username')
+#2 Z:\laragon\www\yii1\framework\web\CBaseController.php(126): require('Z:\\laragon\\www\\...')
+#3 Z:\laragon\www\yii1\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\\laragon\\www\\...', Array, true)
+#4 Z:\laragon\www\yii1\framework\web\CController.php(872): CBaseController->renderFile('Z:\\laragon\\www\\...', Array, true)
+#5 Z:\laragon\www\yii1\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#6 Z:\laragon\www\yii1-klinik\protected\controllers\ReportController.php(72): CController->render('index', Array)
+#7 Z:\laragon\www\yii1\framework\web\actions\CInlineAction.php(49): ReportController->actionIndex()
+#8 Z:\laragon\www\yii1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 Z:\laragon\www\yii1\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 Z:\laragon\www\yii1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\laragon\www\yii1\framework\web\CWebApplication.php(282): CController->run('index')
+#12 Z:\laragon\www\yii1\framework\web\CWebApplication.php(141): CWebApplication->runController('report/index')
+#13 Z:\laragon\www\yii1\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 Z:\laragon\www\yii1-klinik\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=report/index
+HTTP_REFERER=https://yii1-klinik.dev/index.php
+---
+2024/09/02 13:58:00 [error] [exception.CException] CException: Property "WebUser.username" is not defined. in Z:\laragon\www\yii1\framework\base\CComponent.php:130
+Stack trace:
+#0 Z:\laragon\www\yii1\framework\web\auth\CWebUser.php(146): CComponent->__get('username')
+#1 Z:\laragon\www\yii1-klinik\protected\views\report\index.php(255): CWebUser->__get('username')
+#2 Z:\laragon\www\yii1\framework\web\CBaseController.php(126): require('Z:\\laragon\\www\\...')
+#3 Z:\laragon\www\yii1\framework\web\CBaseController.php(95): CBaseController->renderInternal('Z:\\laragon\\www\\...', Array, true)
+#4 Z:\laragon\www\yii1\framework\web\CController.php(872): CBaseController->renderFile('Z:\\laragon\\www\\...', Array, true)
+#5 Z:\laragon\www\yii1\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#6 Z:\laragon\www\yii1-klinik\protected\controllers\ReportController.php(72): CController->render('index', Array)
+#7 Z:\laragon\www\yii1\framework\web\actions\CInlineAction.php(49): ReportController->actionIndex()
+#8 Z:\laragon\www\yii1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 Z:\laragon\www\yii1\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 Z:\laragon\www\yii1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\laragon\www\yii1\framework\web\CWebApplication.php(282): CController->run('index')
+#12 Z:\laragon\www\yii1\framework\web\CWebApplication.php(141): CWebApplication->runController('report/index')
+#13 Z:\laragon\www\yii1\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 Z:\laragon\www\yii1-klinik\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=report/index
+HTTP_REFERER=https://yii1-klinik.dev/index.php
+---

@@ -15,7 +15,13 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/app.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/apexcharts/apexcharts.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/iconly/iconly.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/dripicons/dripicons.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/dripicons/ui-icons-dripicons.css">
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/apexcharts/apexcharts.js"></script>
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
@@ -31,6 +37,7 @@
 			<?php $this->widget('zii.widgets.CMenu', array(
 				'items' => array(
 					array('label' => 'Home', 'url' => array('/site/index')),
+					array('label' => 'Report', 'url' => array('/report/index')),
 					array('label' => 'User', 'url' => array('/user/index')),
 					array('label' => 'Role', 'url' => array('/role/index')),
 					array('label' => 'Region', 'url' => array('/region/index')),
