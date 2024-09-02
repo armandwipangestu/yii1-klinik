@@ -15,4 +15,11 @@ $this->menu = array(
 
 <h1>Create Ticket</h1>
 
-<?php $this->renderPartial('_form', array('model' => $model, 'userOptions' => $userOptions, 'patientOptions' => $patientOptions, 'employeeOptions' => $employeeOptions)); ?>
+<?php $this->renderPartial('_form', array(
+	'model' => $model,
+	'userOptions' => $userOptions,
+	'patientOptions' => $patientOptions,
+	'employeeOptions' => $employeeOptions,
+	'actionOptions' => $actionOptions,
+	'medicationOptions' => $medicationOptions,
+)); ?>

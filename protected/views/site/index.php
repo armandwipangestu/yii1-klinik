@@ -6,6 +6,8 @@ $this->pageTitle = Yii::app()->name;
 
 <h1>Selamat datang di aplikasi <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
 
+<p>Aplikasi ini dibuat oleh <a href="https://armandwipangestu.vercel.app" target="_blank">Arman Dwi Pangestu</a>. Source code aplikasi ini tersedia di <a href="https://github.com/armandwipangestu/yii1-klinik" target="_blank">GitHub - yii1-klinik</a></p>
+
 <p>Aplikasi ini adalah hasil Tes Skill Web Programmer GRIT dari PT Inova Medika Solusindo</p>
 
 <p>Deskripsi Test:</p>
@@ -41,5 +43,3 @@ Adapun dokumen yang dikirimkan adalah:
 
 PT. Inova Medika Solusindo
 <a href="https://www.inovamedika.com">www.inovamedika.com</a><br /><br />
-
-<p>Aplikasi ini dibuat oleh <a href="https://armandwipangestu.vercel.app" target="_blank">Arman Dwi Pangestu</a>. Source code aplikasi ini tersedia di <a href="https://github.com/armandwipangestu/yii1-klinik" target="_blank">GitHub - yii1-klinik</a></p>
