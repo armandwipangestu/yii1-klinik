@@ -36,6 +36,7 @@
 					array('label' => 'Patient', 'url' => array('/patient/index')),
 					array('label' => 'Region', 'url' => array('/region/index')),
 					array('label' => 'Employee', 'url' => array('/employee/index')),
+					array('label' => 'Division', 'url' => array('/division/index')),
 					array('label' => 'Action', 'url' => array('/action/index')),
 					array('label' => 'Medication', 'url' => array('/medication/index')),
 					array('label' => 'Ticket', 'url' => array('/ticket/index')),
