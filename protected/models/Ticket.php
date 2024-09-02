@@ -51,6 +51,7 @@ class Ticket extends CActiveRecord
 			'patient' => array(self::BELONGS_TO, 'Patient', 'patient_id'),
 			'employee' => array(self::BELONGS_TO, 'Employee', 'assigned_to'),
 			'ticketDetail' => array(self::HAS_ONE, 'TicketDetail', 'ticket_id'),
+			'invoice' => array(self::HAS_ONE, 'Invoice', 'ticket_id'),
 		);
 	}
 
