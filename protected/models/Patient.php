@@ -51,6 +51,7 @@ class Patient extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'region' => array(self::BELONGS_TO, 'Region', 'region_id'),
+			'ticket' => array(self::HAS_MANY, 'Ticket', 'patient_id'),
 		);
 	}
 

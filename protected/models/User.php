@@ -46,6 +46,7 @@ class User extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'role' => array(self::BELONGS_TO, 'Role', 'role_id'),
+			'ticket' => array(self::HAS_MANY, 'Ticket', 'created_by'),
 		);
 	}
 

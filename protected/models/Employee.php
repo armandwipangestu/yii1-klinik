@@ -46,6 +46,7 @@ class Employee extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'division' => array(self::BELONGS_TO, 'Division', 'division_id'),
+			'ticket' => array(self::HAS_MANY, 'Ticket', 'assigned_to'),
 		);
 	}
 
