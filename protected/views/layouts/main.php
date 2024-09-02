@@ -15,6 +15,7 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap/bootstrap.css">
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
@@ -26,7 +27,6 @@
 		<div id="header">
 			<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
 		</div><!-- header -->
-
 		<div id="mainmenu">
 			<?php $this->widget('zii.widgets.CMenu', array(
 				'items' => array(
@@ -66,6 +66,8 @@
 		</div><!-- footer -->
 
 	</div><!-- page -->
+
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap/bootstrap.js"></script>
 
 </body>
 
