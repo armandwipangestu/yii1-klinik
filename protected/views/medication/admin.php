@@ -48,6 +48,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'id',
 		'name',
 		'price',
+		'stock',
 		'created_at',
 		'updated_at',
 		array(

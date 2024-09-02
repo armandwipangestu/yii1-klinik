@@ -29,12 +29,13 @@ class Medication extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name, price', 'required'),
-			array('name', 'length', 'max'=>255),
-			array('price', 'length', 'max'=>8),
+			array('name', 'length', 'max' => 255),
+			array('price', 'length', 'max' => 8),
+			array('stock', 'length', 'max' => 8),
 			array('created_at, updated_at', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, price, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('id, name, price, stock, created_at, updated_at', 'safe', 'on' => 'search'),
 		);
 	}
 
@@ -45,8 +46,7 @@ class Medication extends CActiveRecord
 	{
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
-		return array(
-		);
+		return array();
 	}
 
 	/**
@@ -58,6 +58,7 @@ class Medication extends CActiveRecord
 			'id' => 'ID',
 			'name' => 'Name',
 			'price' => 'Price',
+			'stock' => 'Stock',
 			'created_at' => 'Created At',
 			'updated_at' => 'Updated At',
 		);
@@ -79,16 +80,17 @@ class Medication extends CActiveRecord
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
-		$criteria=new CDbCriteria;
+		$criteria = new CDbCriteria;
 
-		$criteria->compare('id',$this->id,true);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('price',$this->price,true);
-		$criteria->compare('created_at',$this->created_at,true);
-		$criteria->compare('updated_at',$this->updated_at,true);
+		$criteria->compare('id', $this->id, true);
+		$criteria->compare('name', $this->name, true);
+		$criteria->compare('price', $this->price, true);
+		$criteria->compare('stock', $this->stock, true);
+		$criteria->compare('created_at', $this->created_at, true);
+		$criteria->compare('updated_at', $this->updated_at, true);
 
 		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
+			'criteria' => $criteria,
 		));
 	}
 
@@ -98,7 +100,7 @@ class Medication extends CActiveRecord
 	 * @param string $className active record class name.
 	 * @return Medication the static model class
 	 */
-	public static function model($className=__CLASS__)
+	public static function model($className = __CLASS__)
 	{
 		return parent::model($className);
 	}
