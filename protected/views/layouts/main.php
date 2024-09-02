@@ -15,7 +15,13 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/app.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/apexcharts/apexcharts.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/iconly/iconly.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/dripicons/dripicons.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/dripicons/ui-icons-dripicons.css">
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/apexcharts/apexcharts.js"></script>
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
@@ -31,16 +37,16 @@
 			<?php $this->widget('zii.widgets.CMenu', array(
 				'items' => array(
 					array('label' => 'Home', 'url' => array('/site/index')),
+					array('label' => 'Report', 'url' => array('/report/index')),
 					array('label' => 'User', 'url' => array('/user/index')),
 					array('label' => 'Role', 'url' => array('/role/index')),
-					array('label' => 'Patient', 'url' => array('/patient/index')),
 					array('label' => 'Region', 'url' => array('/region/index')),
+					array('label' => 'Patient', 'url' => array('/patient/index')),
+					array('label' => 'Division', 'url' => array('/division/index')),
 					array('label' => 'Employee', 'url' => array('/employee/index')),
 					array('label' => 'Action', 'url' => array('/action/index')),
 					array('label' => 'Medication', 'url' => array('/medication/index')),
 					array('label' => 'Ticket', 'url' => array('/ticket/index')),
-					array('label' => 'Ticket Detail', 'url' => array('/ticketDetail/index')),
-					array('label' => 'Invoice', 'url' => array('/invoice/index')),
 					// array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
 					// array('label' => 'Contact', 'url' => array('/site/contact')),
 					array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),

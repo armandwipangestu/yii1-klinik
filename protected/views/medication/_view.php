@@ -13,10 +13,6 @@
 	<?php echo CHtml::encode($data->name); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('price')); ?>:</b>
-	<?php echo CHtml::encode($data->price); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('stock')); ?>:</b>
 	<?php echo CHtml::encode($data->stock); ?>
 	<br />

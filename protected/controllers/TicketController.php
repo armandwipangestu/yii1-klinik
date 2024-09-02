@@ -80,6 +80,12 @@ class TicketController extends Controller
 		$employees = Employee::model()->findAll();
 		$employeeOptions = CHtml::listData($employees, 'id', 'name');
 
+		$actions = Action::model()->findAll();
+		$actionOptions = CHtml::listData($actions, 'id', 'name');
+
+		$medications = Medication::model()->findAll();
+		$medicationOptions = CHtml::listData($medications, 'id', 'name');
+
 		if (isset($_POST['Ticket'])) {
 			$model->attributes = $_POST['Ticket'];
 			if ($model->save())
@@ -91,6 +97,8 @@ class TicketController extends Controller
 			'userOptions' => $userOptions,
 			'patientOptions' => $patientOptions,
 			'employeeOptions' => $employeeOptions,
+			'actionOptions' => $actionOptions,
+			'medicationOptions' => $medicationOptions,
 		));
 	}
 
@@ -115,6 +123,12 @@ class TicketController extends Controller
 		$employees = Employee::model()->findAll();
 		$employeeOptions = CHtml::listData($employees, 'id', 'name');
 
+		$actions = Action::model()->findAll();
+		$actionOptions = CHtml::listData($actions, 'id', 'name');
+
+		$medications = Medication::model()->findAll();
+		$medicationOptions = CHtml::listData($medications, 'id', 'name');
+
 		if (isset($_POST['Ticket'])) {
 			$model->attributes = $_POST['Ticket'];
 			if ($model->save())
@@ -126,6 +140,8 @@ class TicketController extends Controller
 			'userOptions' => $userOptions,
 			'patientOptions' => $patientOptions,
 			'employeeOptions' => $employeeOptions,
+			'actionOptions' => $actionOptions,
+			'medicationOptions' => $medicationOptions,
 		));
 	}
 
