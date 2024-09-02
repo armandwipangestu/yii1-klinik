@@ -44,7 +44,10 @@ $this->menu = array(
 			'value' => $model->medication->name,
 		),
 		'payment_status',
-		'price',
+		array(
+			'label' => 'Price',
+			'value' => 'Rp.' . $model->price,
+		),
 		'created_at',
 		'updated_at',
 	),
