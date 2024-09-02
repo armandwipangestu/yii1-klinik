@@ -49,7 +49,7 @@ $('.search-form form').submit(function(){
 		array(
 			'name' => 'created_by', // Menampilkan nama kolom created_by
 			'value' => function ($data) {
-				return $data->user ? $data->user->username : 'N/A'; // Menampilkan nama user jika ada
+				return $data->user ? $data->user->username : 'N/A'; // Menampilkan username jika ada
 			},
 			'filter' => CHtml::listData(User::model()->findAll(), 'id', 'username'), // Menambahkan filter dropdown jika perlu
 		),
@@ -69,17 +69,38 @@ $('.search-form form').submit(function(){
 		),
 		array(
 			'name' => 'ticket_status',
-			'value' => '$data->ticket_status', // Menampilkan nilai status tiket
+			'value' => '$data->ticket_status', // Menampilkan nilai ticket_status
 			'filter' => array(
 				'Open' => 'Open',
 				'In Progress' => 'In Progress',
 				'Closed' => 'Closed',
-			), // Dropdown filter untuk ticket_status
+			), // Dropdown filter untuk gender
 		),
+		array(
+			'name' => 'action_id', // Menampilkan nama kolom action_id
+			'value' => function ($data) {
+				return $data->action ? $data->action->name : 'N/A'; // Menampilkan nama action jika ada
+			},
+			'filter' => CHtml::listData(Action::model()->findAll(), 'id', 'name'), // Menambahkan filter dropdown jika perlu
+		),
+		array(
+			'name' => 'medication_id', // Menampilkan nama kolom medication_id
+			'value' => function ($data) {
+				return $data->medication ? $data->medication->name : 'N/A'; // Menampilkan nama medication jika ada
+			},
+			'filter' => CHtml::listData(Medication::model()->findAll(), 'id', 'name'), // Menambahkan filter dropdown jika perlu
+		),
+		array(
+			'name' => 'payment_status',
+			'value' => '$data->payment_status', // Menampilkan nilai payment_status
+			'filter' => array(
+				'Paid' => 'Paid',
+				'Unpaid' => 'Unpaid',
+			), // Dropdown filter untuk gender
+		),
+		'price',
 		// 'created_at',
-		/*
-		'updated_at',
-		*/
+		// 'updated_at',
 		array(
 			'class' => 'CButtonColumn',
 		),

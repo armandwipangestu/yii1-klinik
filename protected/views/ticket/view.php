@@ -35,6 +35,16 @@ $this->menu = array(
 			'value' => $model->employee->name,
 		),
 		'ticket_status',
+		array(
+			'label' => 'Action',
+			'value' => $model->action->name,
+		),
+		array(
+			'label' => 'Medication',
+			'value' => $model->medication->name,
+		),
+		'payment_status',
+		'price',
 		'created_at',
 		'updated_at',
 	),

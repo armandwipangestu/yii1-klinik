@@ -26,12 +26,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model, 'price'); ?>
-		<?php echo $form->textField($model, 'price', array('size' => 8, 'maxlength' => 8)); ?>
-		<?php echo $form->error($model, 'price'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model, 'stock'); ?>
 		<?php echo $form->textField($model, 'stock'); ?>
 		<?php echo $form->error($model, 'stock'); ?>
