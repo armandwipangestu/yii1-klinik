@@ -27,6 +27,11 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'stock'); ?>
+		<?php echo $form->textField($model,'stock'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'created_at'); ?>
 		<?php echo $form->textField($model,'created_at'); ?>
 	</div>

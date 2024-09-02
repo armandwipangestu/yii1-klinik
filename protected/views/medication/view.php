@@ -24,6 +24,7 @@ $this->menu=array(
 		'id',
 		'name',
 		'price',
+		'stock',
 		'created_at',
 		'updated_at',
 	),
