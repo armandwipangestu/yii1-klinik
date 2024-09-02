@@ -31,11 +31,11 @@ class Ticket extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('created_by, patient_id, assigned_to, ticket_status', 'required'),
-			array('ticket_status', 'length', 'max'=>11),
+			array('ticket_status', 'length', 'max' => 11),
 			array('created_at, updated_at', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, created_by, patient_id, assigned_to, ticket_status, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('id, created_by, patient_id, assigned_to, ticket_status, created_at, updated_at', 'safe', 'on' => 'search'),
 		);
 	}
 
@@ -47,6 +47,9 @@ class Ticket extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'user' => array(self::BELONGS_TO, 'User', 'created_by'),
+			'patient' => array(self::BELONGS_TO, 'Patient', 'patient_id'),
+			'employee' => array(self::BELONGS_TO, 'Employee', 'assigned_to'),
 		);
 	}
 
@@ -82,18 +85,18 @@ class Ticket extends CActiveRecord
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
-		$criteria=new CDbCriteria;
+		$criteria = new CDbCriteria;
 
-		$criteria->compare('id',$this->id,true);
-		$criteria->compare('created_by',$this->created_by,true);
-		$criteria->compare('patient_id',$this->patient_id,true);
-		$criteria->compare('assigned_to',$this->assigned_to,true);
-		$criteria->compare('ticket_status',$this->ticket_status,true);
-		$criteria->compare('created_at',$this->created_at,true);
-		$criteria->compare('updated_at',$this->updated_at,true);
+		$criteria->compare('id', $this->id, true);
+		$criteria->compare('created_by', $this->created_by, true);
+		$criteria->compare('patient_id', $this->patient_id, true);
+		$criteria->compare('assigned_to', $this->assigned_to, true);
+		$criteria->compare('ticket_status', $this->ticket_status, true);
+		$criteria->compare('created_at', $this->created_at, true);
+		$criteria->compare('updated_at', $this->updated_at, true);
 
 		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
+			'criteria' => $criteria,
 		));
 	}
 
@@ -103,7 +106,7 @@ class Ticket extends CActiveRecord
 	 * @param string $className active record class name.
 	 * @return Ticket the static model class
 	 */
-	public static function model($className=__CLASS__)
+	public static function model($className = __CLASS__)
 	{
 		return parent::model($className);
 	}
